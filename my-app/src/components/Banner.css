@@ -1,0 +1,20 @@
+/* src/components/Banner.css */
+.banner {
+    background:  no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
