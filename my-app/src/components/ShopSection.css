@@ -1,0 +1,43 @@
+/* Shop Section styling */
+.shop-section {
+    display: flex;
+    justify-content: space-around; /* Space items evenly across the section */
+    gap: 20px; /* Space between each item */
+    padding: 40px 20px; /* Add padding to the section to avoid touching edges */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+.shop-item {
+    text-align: center;
+    flex-shrink: 0; /* Prevents items from shrinking if the screen size is too small */
+    max-width: 280px; /* Set max-width for items slightly smaller */
+    padding: 10px; /* Add padding inside each item */
+    background-color: #f7f4f4e3; /* Optional: Add a background color for each item */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling the images within each shop item */
+.shop-item img {
+    width: 100%;
+    max-width: 260px; /* Further reduced max-width for a slightly smaller image size */
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners */
+    cursor: pointer; /* Pointer cursor for clickable images */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.shop-item img:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* Text styling below each image */
+.shop-item p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #333;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Uppercase text for titles */
+}
