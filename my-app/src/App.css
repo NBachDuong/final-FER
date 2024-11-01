@@ -1,25 +1,109 @@
-/* src/App.css */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+/* App.css */
+
+/* Reset some default styles */
+* {
+    box-sizing: border-box; /* Makes width and height calculations easier */
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
+    line-height: 1.6; /* Improve readability */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color for better contrast */
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Space between logo and nav links */
+    padding: 15px 30px; /* Add padding for better spacing */
+    background-color: #ffffff; /* White background for header */
+    border-bottom: 1px solid #eaeaea; /* Subtle border for separation */
+}
+
+.logo {
+    font-size: 36px; /* Larger font size for the logo */
+    font-weight: bold; /* Bold font for the logo */
+    color: #333; /* Dark color for logo text */
+    margin-right: 50px; /* Space to the right of the logo */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-start; /* Align nav links to the left */
+    gap: 30px; /* Space between nav items */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark color for links */
+    font-size: 16px; /* Font size for nav links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Styles for the main content */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px; /* Max width for content */
+    margin: 20px auto; /* Center the container */
+    padding: 0 20px; /* Add padding for smaller screens */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.section-title {
+    text-align: center; /* Center the section title */
+    font-size: 36px; /* Font size for section titles */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below the title */
 }
 
-.text-center {
-  text-align: center;
+.section-content {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.bg-light {
-  background-color: #f8f9fa !important;
+.product-item {
+    flex: 1; /* Allow items to grow */
+    min-width: 300px; /* Minimum width for product items */
+    margin: 15px; /* Space between items */
+    border: 1px solid #eaeaea; /* Border for product items */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background for product items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.product-item:hover {
+    transform: scale(1.02); /* Scale up on hover */
+}
+
+.product-item img {
+    width: 100%; /* Full width for images */
+    border-top-left-radius: 8px; /* Rounded corners */
+    border-top-right-radius: 8px; /* Rounded corners */
+}
+
+.product-item h3 {
+    font-size: 18px; /* Font size for product names */
+    margin: 10px; /* Margin around product name */
+    color: #333; /* Dark text for product names */
+}
+
+.product-item p {
+    margin: 10px; /* Margin for product descriptions */
+    color: #666; /* Lighter color for descriptions */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333; /* Dark background for footer */
+    color: #ffffff; /* White text in footer */
+    text-align: center; /* Center the footer text */
+    padding: 15px 0; /* Padding for footer */
 }

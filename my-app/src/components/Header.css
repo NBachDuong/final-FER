@@ -1,68 +1,59 @@
-/* src/components/Header.css */
+/* Header.css */
 .header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #eaeaea;
-    padding: 10px 0;
-  }
-  
- .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  .navbar-brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    flex-grow: 1; 
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    position: relative;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-    text-transform: uppercase;
-  }
-  
-  .nav-link:hover {
-    color: #007bff;
-  }
-  
-  .navbar-icons {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-icon .nav-link {
-    display: flex;
-    align-items: center;
-    color: #333;
-  }
-  
-  .nav-icon .nav-link:hover {
-    color: #007bff;
-  }
-  
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  justify-content: space-between; /* Space between logo and nav links */
+  padding: 15px 30px; /* Add padding for better spacing */
+  background-color: #ffffff; /* White background for contrast */
+  border-bottom: 1px solid #eaeaea; /* Optional: Add a subtle border for separation */
+}
+
+.logo {
+  font-size: 36px; /* Larger font size for the logo */
+  font-weight: bold; /* Bold font for the logo */
+  color: #333; /* Dark color for logo text */
+  margin-right: 50px; /* Space to the right of the logo */
+  /* Adjust the margin to fine-tune the space between logo and nav */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-start; /* Align nav links to the left */
+  gap: 30px; /* Space between the nav items */
+  margin-right: auto; /* Allow space to the right for equal distance */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Dark color for links */
+  font-size: 16px; /* Font size for nav links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.cart-wishlist {
+  display: flex; /* Align cart and wishlist next to each other */
+  align-items: center; /* Vertically center items */
+  gap: 20px; /* Space between cart and wishlist items */
+  margin-left: 50px; /* Space to the left of the cart and wishlist */
+}
+
+.cart-wishlist a {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Dark color for links */
+  font-size: 16px; /* Font size for cart/wishlist links */
+}
+
+.search-icon {
+  font-size: 18px; /* Font size for the search icon */
+  cursor: pointer; /* Change cursor to pointer */
+  color: #333; /* Color for search icon */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.search-icon:hover {
+  color: #007bff; /* Change color on hover */
+}

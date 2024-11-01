@@ -1,0 +1,56 @@
+/* ServiceSection.css */
+.features {
+    background-color: #ffffff; /* White background for the section */
+}
+
+.py-5 {
+    padding-top: 3rem !important; /* Add top padding */
+    padding-bottom: 3rem !important; /* Add bottom padding */
+}
+
+.row {
+    margin-left: 0; /* Remove default left margin */
+    margin-right: 0; /* Remove default right margin */
+}
+
+.service-item {
+    padding: 20px; /* Inner padding */
+    border: 1px solid #eaeaea; /* Border for items */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light gray background for items */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.element-title {
+    font-size: 20px; /* Font size for the titles */
+    font-weight: 600; /* Semi-bold font for emphasis */
+    margin: 15px 0; /* Space above and below titles */
+}
+
+.text-center {
+    text-align: center; /* Center align text */
+}
+
+.text-capitalize {
+    text-transform: capitalize; /* Capitalize text */
+}
+
+svg {
+    fill: #e7dede; /* Set icon color */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+@media (max-width: 768px) {
+    .element-title {
+        font-size: 18px; /* Slightly smaller font size on mobile */
+    }
+
+    .py-5 {
+        padding-top: 2rem !important; /* Adjust padding for smaller screens */
+        padding-bottom: 2rem !important; /* Adjust padding for smaller screens */
+    }
+}
