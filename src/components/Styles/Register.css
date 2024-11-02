@@ -1,0 +1,61 @@
+/* src/components/Register.css */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5dc; /* Màu nền be nhạt */
+  }
+  
+  .register-form {
+    width: 500px; /* Rộng form */
+    padding: 40px; /* Thêm padding để form trông rộng hơn */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng lớn hơn */
+    background-color: #ffffff; /* Màu nền trắng cho form */
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 28px; /* Tăng kích thước chữ */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 16px; /* Tăng kích thước chữ */
+    color: #555555;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px; /* Tăng chiều cao ô nhập liệu */
+    font-size: 16px; /* Tăng kích thước chữ */
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #fdfdf5; /* Màu nền nhạt cho ô nhập liệu */
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 14px; /* Tăng chiều cao nút */
+    font-size: 18px; /* Tăng kích thước chữ */
+    font-weight: bold;
+    background-color: #3e2723; /* Màu đen nâu */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #5d4037; /* Màu đen nâu sáng hơn khi hover */
+  }
+  

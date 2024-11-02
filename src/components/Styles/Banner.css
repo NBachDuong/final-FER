@@ -1,0 +1,44 @@
+/* Banner.css */
+.banner {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  height: auto; /* Let the height adjust based on content */
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 60px 20px; /* Padding for vertical space */
+  margin: 0 auto; /* Center the banner horizontally */
+  max-width: 1200px; /* Maintain a maximum width for the banner */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow for a flat appearance */
+}
+
+.banner-content {
+  text-align: center; /* Center align the text */
+  max-width: 90%; /* Ensure content fits within the banner */
+}
+
+.banner h1 {
+  font-size: 48px; /* Larger font size for the main title */
+  font-weight: 700; /* Bold text for emphasis */
+  margin: 0 0 10px; /* Margin below the title */
+  color: #333; /* Dark text color */
+}
+
+.banner p {
+  font-size: 18px; /* Font size for the paragraph */
+  color: #666; /* Lighter color for the paragraph */
+  line-height: 1.6; /* Improve readability */
+  margin: 0; /* Remove default margins */
+}
+
+/* Optional: Media query for responsive design */
+@media (max-width: 768px) {
+  .banner h1 {
+      font-size: 32px; /* Smaller font size on mobile */
+  }
+
+  .banner p {
+      font-size: 15px; /* Smaller font size for the paragraph */
+  }
+}
