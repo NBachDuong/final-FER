@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Styles/ProductGrid.css';
 import banner1 from './images/banner-image-1.jpg';
 import banner2 from './images/banner-image-2.jpg';
@@ -8,59 +9,48 @@ import banner5 from './images/banner-image-5.jpg';
 import banner6 from './images/banner-image-6.jpg';
 
 const products = [
-  { 
-    id: 1, 
-    name: 'SOFT LEATHER JACKETS', 
-    description: 'Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.',
-    image: banner1, 
-    link: '/cart' 
-  },
-  { 
-    id: 2, 
-    name: 'SOFT LEATHER JACKETS', 
-    description: 'Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.',
-    image: banner2,
-    link: '/cart' 
-  },
-  { 
-    id: 3, 
-    name: 'SOFT LEATHER JACKETS', 
-    description: 'Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.',
-    image: banner3, 
-    link: '/cart' 
-  },
-  { 
-    id: 4, 
-    name: 'SOFT LEATHER JACKETS', 
-    description: 'Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.',
-    image: banner4, 
-    link: '/cart' 
-  },
-  { 
-    id: 5, 
-    name: 'SOFT LEATHER JACKETS', 
-    description: 'Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.',
-    image: banner5, 
-    link: '/cart' 
-  },
-  { 
-    id: 6, 
-    name: 'SOFT LEATHER JACKETS', 
-    description: 'Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.',
-    image: banner6, 
-    link: '/cart' 
-  },
+  { id: 1, name: 'SOFT LEATHER JACKETS', description: 'Leather jacket', category: 'men', image: banner1, link: '/cart' },
+  { id: 2, name: 'CASUAL T-SHIRTS', description: 'Casual T-Shirts', category: 'men', image: banner2, link: '/cart' },
+  { id: 3, name: 'CLASSIC JEANS', description: 'Classic jeans', category: 'women', image: banner3, link: '/cart' },
+  { id: 4, name: 'FORMAL SUITS', description: 'Formal suits', category: 'women', image: banner4, link: '/cart' },
+  { id: 5, name: 'HOODIES & SWEATSHIRTS', description: 'Comfortable hoodies', category: 'accessories', image: banner5, link: '/cart' },
+  { id: 6, name: 'ACCESSORIES', description: 'Fashion accessories', category: 'accessories', image: banner6, link: '/cart' },
 ];
 
 const ProductGrid = () => {
-  // Function to create carousel items
-  const createCarouselItems = () => {
-    const items = [];
-    for (let i = 0; i < products.length; i += 3) {
-      items.push(
-        <div className={`item ${i === 0 ? 'active' : ''}`} key={i}>
-          <div className="row">
-            {products.slice(i, i + 3).map((product) => (
+  const location = useLocation();
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const category = queryParams.get('category');
+    const searchQuery = queryParams.get('search')?.toLowerCase() || '';
+
+    let results = products;
+
+    if (category) {
+      results = results.filter((product) => product.category === category);
+    }
+    
+    if (searchQuery) {
+      results = results.filter(
+        (product) =>
+          product.name.toLowerCase().includes(searchQuery) ||
+          product.description.toLowerCase().includes(searchQuery)
+      );
+    }
+
+    setFilteredProducts(results);
+  }, [location.search]);
+  
+
+  return (
+    <section className="product-grid">
+      <div className="container">
+        
+        <div className="row">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
               <div className="col-md-4" key={product.id}>
                 <div className="product-item">
                   <img src={product.image} alt={product.name} className="img-fluid" />
@@ -69,31 +59,10 @@ const ProductGrid = () => {
                   <a href={product.link} className="discover-button">Get it</a>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      );
-    }
-    return items;
-  };
-
-  return (
-    <section className="product-grid">
-      <div className="container">
-        <div id="productCarousel" className="carousel slide" data-ride="carousel">
-          <div className="carousel-inner">
-            {createCarouselItems()}
-          </div>
-
-          {/* Carousel controls */}
-          <a className="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
+            ))
+          ) : (
+            <p>No products found</p>
+          )}
         </div>
       </div>
     </section>

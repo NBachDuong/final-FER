@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+// Nếu đang dùng Bootstrap 4 và cần JavaScript
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

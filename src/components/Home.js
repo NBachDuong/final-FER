@@ -2,74 +2,31 @@ import React from 'react';
 import anh1 from './images/cat-item1.jpg';
 import anh2 from './images/cat-item2.jpg';
 import anh3 from './images/cat-item3.jpg';
+import './Styles/About.css';
+import ProductGrid from './ProductGrid';
 
 
 function Home() {
   return (
     <>
+
     <div>
       <section className="hero-section text-center bg-secondary text-white py-5">
-        <div className=" text-center">
+        <div className="text-center">
           <h1>Welcome to Kaira</h1>
           <a href="/about" className="btn btn-light mt-3">About Us</a>
         </div>
       </section>  
-    </div>
-    
-    <section className="hero-section text-center  py-5">
+      </div>
+
+       <section className="hero-section text-center  py-5">
         <div className=" text-center">
           <h1>New Collections</h1>
         </div>
-
-        <div class="container text-center hero-section">
-          <div class="row align-items-start">
-            <div class="col">
-              <div class="card" style={{width: 18 + 'em'}}>
-              <img src={anh1} class="product-item" alt="quang cao"/>
-              <div class="card-body">
-                <h3 class="product-item">Shop For Men</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/productGrid" class="discover-button">More infomation</a>
-              </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style={{width: 18 + 'em'}}>
-              <img src={anh2} class="product-item" alt="quang cao"/>
-              <div class="card-body">
-                <h3 class="product-item">Shop For Women</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/productGrid" class="discover-button">More infomation</a>
-              </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style={{width: 18 + 'em'}}>
-              <img src={anh3} class="product-item" alt="quang cao"/>
-              <div class="card-body">
-                <h3 class="product-item">Shop Accessories</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/productGrid" class="discover-button">More infomation</a>
-              </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style={{width: 18 + 'em'}}>
-              <img src={anh3} class="product-item" alt="quang cao"/>
-              <div class="card-body">
-                <h3 class="product-item">Shop Accessories</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/productGrid" class="discover-button">More infomation</a>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-    <section className="features py-5">
+        <ProductGrid />
+      
+    
+      <section className="features py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-md-3 text-center aos-init aos-animate" data-aos="fade-in">
@@ -110,7 +67,48 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
+
+
+      <section className="hero-section text-center py-5">
+        
+        <div className="container text-center hero-section">
+          <div className="row align-items-start">
+            <div className="col">
+              <div className="card" style={{ width: '18em' }}>
+                <img src={anh1} className="product-item" alt="Shop for Men" />
+                <div className="card-body">
+                  <h3 className="product-item">Shop For Men</h3>
+                  <p className="card-text">Discover stylish outfits for men.</p>
+                  <a href="/productGrid?category=men" className="discover-button">More Information</a>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card" style={{ width: '18em' }}>
+                <img src={anh2} className="product-item" alt="Shop for Women" />
+                <div className="card-body">
+                  <h3 className="product-item">Shop For Women</h3>
+                  <p className="card-text">Discover stylish outfits for women.</p>
+                  <a href="/productGrid?category=women" className="discover-button">More Information</a>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card" style={{ width: '18em' }}>
+                <img src={anh3} className="product-item" alt="Shop Accessories" />
+                <div className="card-body">
+                  <h3 className="product-item">Shop Accessories</h3>
+                  <p className="card-text">Find the perfect accessories.</p>
+                  <a href="/productGrid?category=accessories" className="discover-button">More Information</a>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+      </section>
     </>
   );
 }
