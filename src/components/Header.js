@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.css'; // Đảm bảo đã import CSS đúng cách
+import './Styles/Header.css'; // Đảm bảo đã import CSS đúng cách
 
 function Header() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -24,16 +24,13 @@ function Header() {
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/productGrid">SHOP</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
+                <Link className="nav-link" to="/about">Page</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/portfolio">Portfolio</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to="/login">Log in</Link>
               </li>
               <li className="nav-item">
                 <button className="btn btn-link nav-link" onClick={toggleSidebar}>
@@ -55,21 +52,28 @@ function Header() {
 
         {/* Product List in Cart */}
         <div className="cart-item">
-          <p className="cart-item-title">
-          Growers cider 
+            <p className="cart-item-title">
+            Growers cider 
             <span className="cart-item-price">$10.00</span>
-          </p>
+              <img src="/images/banner-image-1.jpg" alt="Growers cider" className="cart-item-image" />
+           </p>
         </div>
+
+
         <div className="cart-item">
-          <p className="cart-item-title">
-          Fresh grapes
+            <p className="cart-item-title">
+            Fresh grapes
             <span className="cart-item-price">$20.00</span>
-          </p>
+              <img src="/images/banner-image-2.jpg" alt="Fresh grapes" className="cart-item-image" />
+           </p>
         </div>
+
+
         <div className="cart-item">
           <p className="cart-item-title">
           Heinz tomato ketchup 
             <span className="cart-item-price">$15.00</span>
+            <img src="/images/banner-image-4.jpg" alt="Fresh grapes" className="cart-item-image" />
           </p>
         </div>
 
@@ -77,7 +81,7 @@ function Header() {
         <div className="cart-total">
           Total: $45.00
         </div>
-        <Link to="/checkout" className="cart-checkout-btn">Continue to Checkout</Link>
+        <Link to="/cart" className="cart-checkout-btn">Continue to Checkout</Link>
       </div>
     </>
   );

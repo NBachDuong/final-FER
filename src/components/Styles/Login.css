@@ -1,0 +1,69 @@
+/* src/components/Login.css */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5dc; /* Màu nền be nhạt */
+  }
+  
+  .login-form {
+    width: 500px; /* Tăng chiều rộng của form */
+    padding: 50px; /* Tăng khoảng cách bên trong form */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng lớn hơn */
+    background-color: #ffffff; /* Màu nền trắng của form */
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 32px; /* Tăng kích thước chữ */
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 18px; /* Tăng kích thước chữ */
+    color: #555555;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 14px; /* Tăng chiều cao ô nhập liệu */
+    font-size: 18px; /* Tăng kích thước chữ */
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #fdfdf5; /* Màu nền nhạt cho ô nhập liệu */
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 14px; /* Tăng chiều cao nút */
+    font-size: 20px; /* Tăng kích thước chữ */
+    font-weight: bold;
+    background-color: #3e2723; /* Màu đen nâu */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #5d4037; /* Màu đen nâu sáng hơn khi hover */
+  }
+  
+  .message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px; /* Tăng kích thước chữ cho thông báo */
+    color: #d32f2f; /* Màu đỏ nhạt cho thông báo lỗi */
+  }
+  
