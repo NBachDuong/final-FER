@@ -101,3 +101,12 @@
   color: #666; /* Adjust color if needed */
   margin: 0; /* Remove default margin */
 }
+h1 {
+  font-size: 2.5rem; /* Tăng kích thước font */
+  font-weight: bold;
+  margin-bottom: 2rem; /* Tạo khoảng cách dưới tiêu đề */
+  text-align: center; /* Căn giữa tiêu đề */
+}
+.product-grid {
+  margin-top: 250rem; /* Tạo khoảng cách trên phần ProductGrid */
+}

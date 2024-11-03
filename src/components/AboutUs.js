@@ -3,6 +3,9 @@ import './Styles/AboutUs.css';
 import blog1 from './images/post-large-image1.jpg';
 import blog2 from './images/post-large-image2.jpg';
 import blog3 from './images/post-large-image3.jpg';
+import blog4 from './images/post-image7.jpg';
+import blog5 from './images/post-image8.jpg';
+import blog6 from './images/post-image9.jpg';
 
 const blogPosts = [
   {
@@ -29,19 +32,42 @@ const blogPosts = [
     description: 'Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...',
     image: blog3,
   },
+  {
+    id: 4,
+    category: 'FASHION',
+    date: 'JUL 12, 2022',
+    title: 'STYLE TIPS FOR FALL',
+    description: 'Explore the latest styles and trends for the upcoming fall season...',
+    image: blog4,
+  },
+  {
+    id: 5,
+    category: 'FASHION',
+    date: 'JUL 12, 2022',
+    title: 'STREET STYLE INSPIRATIONS',
+    description: 'Get inspired by street style trends from around the world...',
+    image: blog5,
+  },
+  {
+    id: 6,
+    category: 'FASHION',
+    date: 'JUL 12, 2022',
+    title: 'ACCESSORIES TO COMPLETE YOUR LOOK',
+    description: 'Learn how accessories can elevate your style and complete your outfit...',
+    image: blog6,
+  },
 ];
 
 function AboutUs() {
   return (
     <section className="blog-posts-section">
-      <div className="container">
-        {/* Header section for title and view all link */}
-        <div className="header">
-          <h2 className="section-title">READ BLOG POSTS</h2>
-          <a href="/blog" className="view-all-link">VIEW ALL</a>
-        </div>
+      {/* Tiêu đề "READ BLOG POSTS" ở đầu trang */}
+      <div className="title-container">
+        <h2 className="section-title">READ BLOG POSTS</h2>
+      </div>
 
-        {/* Blog posts grid */}
+      {/* Danh sách các bài viết */}
+      <div className="container">
         <div className="row">
           {blogPosts.map((post) => (
             <div key={post.id} className="col-md-4">

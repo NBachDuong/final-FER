@@ -1,109 +1,61 @@
-.blog-posts-section {
-  padding: 50px 0;
-}
-
-.blog-posts-section .header {
+/* Đặt tiêu đề ở đầu và căn giữa nó, với khoảng cách hợp lý từ viền */
+.title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  padding: 0 20px;
-  /* Ensures the header sits above the content */
+  padding: 0 1rem; /* Thêm khoảng đệm bên trái và phải */
+  margin-bottom: 2rem;
 }
 
 .section-title {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
+  margin-left: 0.5rem; /* Dịch sang phải để tránh dính vào viền trái */
 }
 
 .view-all-link {
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #000;
-  padding-bottom: 2px;
-}
-
-.view-all-link:hover {
+  font-size: 1rem;
+  text-decoration: underline;
   color: #333;
-  border-color: #333;
+  margin-right: 0.5rem; /* Dịch sang trái để tránh dính vào viền phải */
 }
 
 .blog-post {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
   overflow: hidden;
-  background: #fff;
-  transition: transform 0.2s ease;
-  margin-bottom: 30px;
+  transition: transform 0.3s;
 }
 
 .blog-post:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
 .blog-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
+  height: auto;
 }
 
 .blog-info {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .blog-category-date {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #888;
-  margin-bottom: 5px;
-  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .blog-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin: 10px 0;
   color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .blog-description {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Additional styling to create space around blog post section */
-.container .row {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-
-.container .col-md-4 {
-  padding: 0 10px;
-}
-
-/* Footer and header spacing */
-.footer {
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-
-.footer-section {
-  margin-bottom: 20px;
-}
-
-.footer-section h3 {
-  font-weight: bold;
-}
-
-.footer-section p,
-.footer-section ul,
-.footer-section a {
-  font-size: 14px;
+  font-size: 1rem;
   color: #555;
 }
