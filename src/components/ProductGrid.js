@@ -56,7 +56,7 @@ const ProductGrid = () => {
                   <img src={product.image} alt={product.name} className="img-fluid" />
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
-                  <a href={product.link} className="discover-button">Get it</a>
+                  <a href={product.link} className="discover-button">DISCOVER NOW</a>
                 </div>
               </div>
             ))

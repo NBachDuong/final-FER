@@ -2,31 +2,55 @@ import React from 'react';
 import anh1 from './images/cat-item1.jpg';
 import anh2 from './images/cat-item2.jpg';
 import anh3 from './images/cat-item3.jpg';
+<<<<<<< HEAD
 import './Styles/About.css';
 import ProductGrid from './ProductGrid';
 
+=======
+import ProductGrid from './ProductGrid';
+import { Link } from 'react-router-dom';
+>>>>>>> a0ab7f45f863c06750b90cb9a2dd533fc44b0872
 
 function Home() {
   return (
     <>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> a0ab7f45f863c06750b90cb9a2dd533fc44b0872
     <div>
       <section className="hero-section text-center bg-secondary text-white py-5">
         <div className="text-center">
           <h1>Welcome to Kaira</h1>
-          <a href="/about" className="btn btn-light mt-3">About Us</a>
+          <Link to="/about" className="black-button mt-3">ABOUT US</Link>    
         </div>
       </section>  
+<<<<<<< HEAD
       </div>
 
        <section className="hero-section text-center  py-5">
+=======
+    </div>
+
+    
+    <section className="hero-section text-center  py-5">
+>>>>>>> a0ab7f45f863c06750b90cb9a2dd533fc44b0872
         <div className=" text-center">
           <h1>New Collections</h1>
         </div>
         <ProductGrid />
+<<<<<<< HEAD
       
     
       <section className="features py-5">
+=======
+        
+
+
+
+    <section className="features py-5">
+>>>>>>> a0ab7f45f863c06750b90cb9a2dd533fc44b0872
             <div className="container">
                 <div className="row">
                     <div className="col-md-3 text-center aos-init aos-animate" data-aos="fade-in">
@@ -68,6 +92,7 @@ function Home() {
                 </div>
             </div>
             </section>
+<<<<<<< HEAD
 
 
       <section className="hero-section text-center py-5">
@@ -109,6 +134,59 @@ function Home() {
         </div>
       </section>
       </section>
+=======
+<div className="container text-center hero-section">
+  <div className="row">
+    <div className="col-md-4">
+      <div className="card" style={{ width: '70%', margin: 'auto' }}>
+        <img src={anh1} className="product-item img-fluid" alt="quang cao" />
+        <div className="card-body">
+          <h3 className="product-item">Shop For Men</h3>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="/productGrid" className="discover-button">
+            More information
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-md-4">
+      <div className="card" style={{ width: '70%', margin: 'auto' }}>
+        <img src={anh2} className="product-item img-fluid" alt="quang cao" />
+        <div className="card-body">
+          <h3 className="product-item">Shop For Women</h3>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="/productGrid" className="discover-button">
+            More information
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-md-4">
+      <div className="card" style={{ width: '70%', margin: 'auto' }}>
+        <img src={anh3} className="product-item img-fluid" alt="quang cao" />
+        <div className="card-body">
+          <h3 className="product-item">Shop Accessories</h3>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="/productGrid" className="discover-button">
+            More information
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+>>>>>>> a0ab7f45f863c06750b90cb9a2dd533fc44b0872
     </>
   );
 }

@@ -1,0 +1,61 @@
+/* Đặt tiêu đề ở đầu và căn giữa nó, với khoảng cách hợp lý từ viền */
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Thêm khoảng đệm bên trái và phải */
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 0.5rem; /* Dịch sang phải để tránh dính vào viền trái */
+}
+
+.view-all-link {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #333;
+  margin-right: 0.5rem; /* Dịch sang trái để tránh dính vào viền phải */
+}
+
+.blog-post {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+}
+
+.blog-info {
+  padding: 1.5rem;
+}
+
+.blog-category-date {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.blog-description {
+  font-size: 1rem;
+  color: #555;
+}
