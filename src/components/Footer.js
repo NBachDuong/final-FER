@@ -1,5 +1,11 @@
 import React from 'react';
 import './Styles/Footer.css'; // Import the CSS file
+import logo1 from './images/arct-icon.png';
+import logo2 from './images/dhl-logo.png';
+import logo3 from './images/visa-card.png';
+import logo4 from './images/paypal-card.png'
+import logo5 from './images/master-card.png'
+
 
 function Footer() {
     return (
@@ -49,14 +55,14 @@ function Footer() {
             <div className="footer-bottom">
                 <p>We ship with: 
                     <span className="shipping-icons"> 
-                        <img src="./images/arct-icon.png" alt="Shipping" /> 
-                        <img src="./images/dhl-logo.png" alt="Shipping" /> 
+                        <img src={logo1} alt="Shipping" /> 
+                        <img src={logo2} alt="Shipping" /> 
                     </span> 
                     Payment Option: 
                     <span className="payment-icons"> 
-                        <img src="./images/visa-card.png" alt="Visa" /> 
-                        <img src="./images/paypal-card.png" alt="PayPal" /> 
-                        <img src="./images/master-card.png" alt="Mastercard" /> 
+                        <img src={logo3} alt="Visa" /> 
+                        <img src={logo4} alt="PayPal" /> 
+                        <img src={logo5} alt="Mastercard" /> 
                     </span>
                 </p>
                 <p>&copy; Copyright 2024 Kaira. All rights reserved. </p>

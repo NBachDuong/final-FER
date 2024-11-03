@@ -44,7 +44,7 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="login-button">Login</button>
-        <a href="/signin" className="btn btn-light  ">Sign in</a>
+        <a href="/signin" className="btn  btn-light  ">Sign in</a>
         {message && <p className="message">{message}</p>}
       </form>
     </div>

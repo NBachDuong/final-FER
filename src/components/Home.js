@@ -1,4 +1,8 @@
 import React from 'react';
+import anh1 from './images/cat-item1.jpg';
+import anh2 from './images/cat-item2.jpg';
+import anh3 from './images/cat-item3.jpg';
+
 
 function Home() {
   return (
@@ -15,9 +19,55 @@ function Home() {
     <section className="hero-section text-center  py-5">
         <div className=" text-center">
           <h1>New Collections</h1>
-          
+        </div>
+
+        <div class="container text-center hero-section">
+          <div class="row align-items-start">
+            <div class="col">
+              <div class="card" style={{width: 18 + 'em'}}>
+              <img src={anh1} class="product-item" alt="quang cao"/>
+              <div class="card-body">
+                <h3 class="product-item">Shop For Men</h3>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/productGrid" class="discover-button">More infomation</a>
+              </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style={{width: 18 + 'em'}}>
+              <img src={anh2} class="product-item" alt="quang cao"/>
+              <div class="card-body">
+                <h3 class="product-item">Shop For Women</h3>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/productGrid" class="discover-button">More infomation</a>
+              </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style={{width: 18 + 'em'}}>
+              <img src={anh3} class="product-item" alt="quang cao"/>
+              <div class="card-body">
+                <h3 class="product-item">Shop Accessories</h3>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/productGrid" class="discover-button">More infomation</a>
+              </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style={{width: 18 + 'em'}}>
+              <img src={anh3} class="product-item" alt="quang cao"/>
+              <div class="card-body">
+                <h3 class="product-item">Shop Accessories</h3>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/productGrid" class="discover-button">More infomation</a>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+
 
     <section className="features py-5">
             <div className="container">

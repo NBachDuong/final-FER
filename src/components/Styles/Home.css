@@ -1,0 +1,88 @@
+/* src/components/ProductGrid.css */
+.product-grid {
+    padding: 40px 0; /* Add some padding above and below the grid */
+    background-color: #f4f3f3d6;
+  }
+  
+  .product-item {
+    text-align: center; /* Center text within product items */
+  }
+  
+  .product-item img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .discover-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #413c3c;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discover-button:hover {
+    background-color: #1d1a1a;
+  }
+  .product-grid {
+    padding: 20px 0;
+  }
+  
+  .product-item {
+    text-align: center;
+    margin-bottom: 30px; /* Space between products */
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+  }
+  
+  h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+    margin: 10px 0; /* Space around the heading */
+  }
+  
+  p {
+    font-size: 1rem; /* Adjust paragraph text size */
+    color: #555; /* Dark grey color for description */
+  }
+  
+  .discover-button {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #000; /* Background color */
+    color: #fff; /* Text color */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  .discover-button:hover {
+    background-color: #444; /* Darken on hover */
+  }
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: 80vh; /* Đảm bảo phần này chiếm phần lớn màn hình */
+  }
