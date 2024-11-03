@@ -3,6 +3,7 @@ import anh1 from './images/cat-item1.jpg';
 import anh2 from './images/cat-item2.jpg';
 import anh3 from './images/cat-item3.jpg';
 import ProductGrid from './ProductGrid';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
       <section className="hero-section text-center bg-secondary text-white py-5">
         <div className=" text-center">
           <h1>Welcome to Kaira</h1>
-          <Link to="/about" className="btn btn-light mt-3">About Us</Link> {/* Link to the About Us page */}
+          <Link to="/about" className="black-button mt-3">ABOUT US</Link>    
         </div>
       </section>  
     </div>
@@ -21,8 +22,6 @@ function Home() {
     <section className="hero-section text-center  py-5">
         <div className=" text-center">
           <h1>New Collections</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Saepe voluptas ut dolorum consequuntur, 
-            adipisci repellat! Evinet commodi voluptatem voluptate, eum minima, in suscipit explicabo voluptatibus harum, quibusdam ex repellat eaque!</p>
         </div>
         <ProductGrid />
         

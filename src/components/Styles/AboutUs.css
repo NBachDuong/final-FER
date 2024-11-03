@@ -1,0 +1,109 @@
+.blog-posts-section {
+  padding: 50px 0;
+}
+
+.blog-posts-section .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  /* Ensures the header sits above the content */
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.view-all-link {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}
+
+.view-all-link:hover {
+  color: #333;
+  border-color: #333;
+}
+
+.blog-post {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease;
+  margin-bottom: 30px;
+}
+
+.blog-post:hover {
+  transform: scale(1.05);
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-info {
+  padding: 20px;
+}
+
+.blog-category-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+.blog-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Additional styling to create space around blog post section */
+.container .row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.container .col-md-4 {
+  padding: 0 10px;
+}
+
+/* Footer and header spacing */
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  font-size: 14px;
+  color: #555;
+}
