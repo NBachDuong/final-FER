@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Styles/Cart.css';
 
 function Cart() {
@@ -8,6 +8,36 @@ function Cart() {
     { id: 3, name: 'Growers cider', size: 'XL', color: 'blue', brand: 'Tissot', price: 20, quantity: 1, image: '/images/banner-image-4.jpg' },
   ]);
 
+  const paypalRendered = useRef(false); // Khởi tạo useRef để kiểm tra đã render nút PayPal hay chưa
+  const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
+  useEffect(() => {
+    if (!paypalRendered.current) {
+      paypalRendered.current = true; // Đảm bảo chỉ gọi PayPal Buttons một lần duy nhất
+      window.paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: totalPrice.toFixed(2),
+              }
+            }]
+          });
+        },
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(details => {
+            alert('Giao dịch đã hoàn tất bởi ' + details.payer.name.given_name);
+          });
+        },
+        onError: (err) => {
+          console.error("Lỗi PayPal:", err);
+          alert('Giao dịch không thể được xử lý. Vui lòng thử lại.');
+        }
+      }).render('#paypal-button-container');
+    }
+  }, [totalPrice]);
+
+  // Các hàm xử lý giỏ hàng...
   const handleQuantityChange = (id, newQuantity) => {
     setCartItems(
       cartItems.map(item =>
@@ -52,16 +82,15 @@ function Cart() {
           <input type="text" placeholder="Coupon code" className="coupon-input" />
           <button className="apply-btn">Apply</button>
           <div className="total">
-            <p>Total price: <span>USD 45.00$</span></p>
+            <p>Total price: <span>USD {(totalPrice).toFixed(2)}$</span></p>
             <p>Discount: <span>USD 5.00$</span></p>
-            <p><strong>Total:</strong> <span className="final-price">$40.00</span></p>
+            <p><strong>Total:</strong> <span className="final-price">${(totalPrice - 5).toFixed(2)}</span></p>
           </div>
           <div className="payment-methods">
-            <img src="/images/paypal.png" alt="PayPal" />
+            <div id="paypal-button-container"></div>
             <img src="/images/visa.png" alt="Visa" />
             <img src="/images/mastercard.png" alt="Mastercard" />
           </div>
-          <button className="purchase-btn">Make Purchase</button>
         </div>
       </div>
       <div className="delivery-info">Free Delivery within 1-2 weeks</div>
