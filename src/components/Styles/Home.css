@@ -20,7 +20,7 @@
   }
   
   p {
-    font-size: 1rem;
+    font-size: 16px;
     color: #555;
   }
   
@@ -86,3 +86,18 @@
     padding-bottom: 2rem;
     min-height: 80vh; /* Đảm bảo phần này chiếm phần lớn màn hình */
   }
+  /* Container styling to center-align */
+.text-container {
+  text-align: center;
+  max-width: 800px; /* Adjust the max-width to control line breaks */
+  margin: 0 auto; /* Center the container */
+  padding: 10px 20px; /* Optional padding for better spacing */
+}
+
+/* Paragraph styling */
+.text-container p {
+  font-size: 16px; /* Adjust as needed */
+  line-height: 1.6; /* Line height for readability */
+  color: #666; /* Adjust color if needed */
+  margin: 0; /* Remove default margin */
+}
